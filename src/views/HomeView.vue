@@ -60,7 +60,7 @@ const sendMessage = async () => {
     </div>
     <div class="bottom">
       <el-input v-model="input" @keyup.enter="handleEnter" placeholder="想知道什么，来问问我~" size="large" />
-      <div class="footer-desc">以上内容均由AI生成, 仅供参考和借鉴<br/>copyright © 2021-2024  辽ICP备2024045160号</div>
+      <div :class="`footer-desc ${messageList.length === 0}`">以上内容均由AI生成, 仅供参考和借鉴<br/>copyright © 2021-2024  辽ICP备2024045160号</div>
     </div>
   </main>
 </template>
@@ -117,11 +117,13 @@ html, body, #app {
       }
     }
     .footer-desc{
-      margin-top: calc(50vh - 60px);
       font-size: 12px;
       text-align: center;
       color: #b0b7c0;
       padding: 8px 0 4px;
+      &.true{
+        margin-top: calc(50vh - 60px);
+      }
     }
   }
 }
