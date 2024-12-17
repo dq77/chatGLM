@@ -1,0 +1,11 @@
+
+.green {
+  padding: 3px;
+}
+
+@media (min-width: 1024px) {
+  .green {
+    padding: 3px;
+  }
+
+}
