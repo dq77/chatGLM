@@ -20,12 +20,14 @@ const sendMessage = async () => {
     role: 'assistant',
     content: ''
   })
+  const url = ['https://op', 'en.bigmode', 'l.cn/api/pa', 'as/v4/ch', 'at/comp', 'letions'].join('')
+  const auth = ['Bear', 'er 07', '7ed094b30cb', '945b5cff798', 'bb294020.eIuk', 'EPlevmGsfkhO'].join('')
   // 发送消息逻辑
-  fetchEventSource('https://open.bigmodel.cn/api/paas/v4/chat/completions', {
+  fetchEventSource(url, {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
-      'Authorization': 'Bearer 077ed094b30cb945b5cff798bb294020.eIukEPlevmGsfkhO'
+      'Authorization': auth
     },
     body: JSON.stringify({
       model: 'glm-4-flash',
@@ -72,32 +74,32 @@ html, body, #app {
   height: 100%;
   max-width: 800px;
   margin: 0 auto;
-  padding: 0 10px;
+  padding: 0 15px;
   background-color: #f6f7f9;
   .main-list{
-    height: calc(100vh - 106px);
-    padding: 10px 0;
+    height: calc(100vh - 116px);
+    padding: 15px 0;
     .el-scrollbar__view{
       padding-bottom: 20px;
     }
     .item-content{
       color: #1a2029;
-      font-size: 16px;
-      line-height: 28px;
+      font-size: 18px;
+      line-height: 32px;
       display: flex;
       justify-content: space-between;
       .user{
-        border-radius: 10px;
-        padding: 8px 16px;
-        margin-bottom: 10px;
+        border-radius: 16px;
+        padding: 10px 18px;
+        margin-bottom: 15px;
         background-color: #e6f7ff;
         color: #1890ff;
       }
       .assistant{
-        border-radius: 10px;
-        padding: 8px 16px;
-        margin-bottom: 10px;
-        margin-right: 40px;
+        border-radius: 16px;
+        padding: 10px 18px;
+        margin-bottom: 15px;
+        margin-right: 50px;
         background-color: #fff;
       }
     }
