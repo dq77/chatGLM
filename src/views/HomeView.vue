@@ -77,7 +77,7 @@ html, body, #app {
   padding: 0 15px;
   background-color: #f6f7f9;
   .main-list{
-    height: calc(100vh - 116px);
+    height: calc(100vh - 120px);
     padding: 15px 0;
     .el-scrollbar__view{
       padding-bottom: 20px;
@@ -105,12 +105,19 @@ html, body, #app {
     }
   }
   .bottom{
-    height: 86px;
+    height: 90px;
+    .el-input--large{
+      font-size: 16px;
+      .el-input__inner{
+        height: 44px;
+        line-height: 44px;
+      }
+    }
     .footer-desc{
       font-size: 12px;
       text-align: center;
       color: #b0b7c0;
-      padding: 10px 0 4px;
+      padding: 8px 0 4px;
     }
   }
 }
