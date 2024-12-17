@@ -50,7 +50,7 @@ const sendMessage = async () => {
 
 <template>
   <main class="main-ctx">
-    <div class="main-list">
+    <div :class="`main-list ${messageList.length === 0}`">
       <el-scrollbar>
         <div v-for="(item, index) in messageList" :key="index" :class="`item-content`">
           <div v-if="item.role === 'user'"></div>
@@ -79,6 +79,9 @@ html, body, #app {
   .main-list{
     height: calc(100vh - 120px);
     padding: 15px 0;
+    &.true {
+      height: calc(50vh - 60px);
+    }
     .el-scrollbar__view{
       padding-bottom: 20px;
     }
@@ -114,6 +117,7 @@ html, body, #app {
       }
     }
     .footer-desc{
+      margin-top: calc(50vh - 60px);
       font-size: 12px;
       text-align: center;
       color: #b0b7c0;
