@@ -20,7 +20,7 @@ const sendMessage = async () => {
     role: 'assistant',
     content: ''
   })
-  const url = ['https://op', 'en.bigmode', 'l.cn/api/pa', 'as/v4/ch', 'at/comp', 'letions'].join('')
+  const url = ['https://ap', 'i.76776', '6.xyz/glm/api/pa', 'as/v4/ch', 'at/comp', 'letions'].join('')
   const auth = ['Bear', 'er 07', '7ed094b30cb', '945b5cff798', 'bb294020.eIuk', 'EPlevmGsfkhO'].join('')
   // 发送消息逻辑
   fetchEventSource(url, {

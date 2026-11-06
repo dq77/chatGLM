@@ -8,7 +8,6 @@ import { ElementPlusResolver } from 'unplugin-vue-components/resolvers'
 
 // https://vite.dev/config/
 export default defineConfig({
-  base: '/chatGLM',
   plugins: [
     vue(),
     AutoImport({
@@ -22,8 +21,5 @@ export default defineConfig({
     alias: {
       '@': fileURLToPath(new URL('./src', import.meta.url))
     },
-  },
-  build: {
-    outDir: 'docs', // 默认值是'dist'
   },
 })
